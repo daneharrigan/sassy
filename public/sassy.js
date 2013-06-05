@@ -32,8 +32,7 @@
     var el = sassTag(),
         contentType = el.type,
         payload  = el.innerText,
-        endpoint = "/generate"
-        //endpoint = "http://sassy.herokuapp.com/generate"
+        endpoint = "http://sassy.herokuapp.com/generate"
 
     var req = new XMLHttpRequest()
     req.open("POST", endpoint)
