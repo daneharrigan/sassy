@@ -13,6 +13,10 @@ post "/generate" do
   Sass::Engine.new(content, options).render
 end
 
+options "/generate" do
+  headers "Access-Control-Allow-Origin" =>  "*"
+end
+
 get "/" do
   File.read("public/index.html")
 end
