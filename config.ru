@@ -2,6 +2,8 @@ require "sinatra"
 require "sass"
 require "compass"
 
+set :protection, :except => :frame_options
+
 post "/generate" do
   headers "Access-Control-Allow-Origin" =>  "*"
   content_type "text/css"
