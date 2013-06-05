@@ -7,7 +7,7 @@ disable :protection
 post "/generate" do
   headers(
     "Access-Control-Allow-Origin" =>  "*",
-    "Access-Control-Allow-Headers" => "*")
+    "Access-Control-Allow-Headers" => "Content-Type")
   content_type "text/css"
 
   content = request.body.read
@@ -20,7 +20,7 @@ end
 options "/generate" do
   headers(
     "Access-Control-Allow-Origin" =>  "*",
-    "Access-Control-Allow-Headers" => "*")
+    "Access-Control-Allow-Headers" => "Content-Type")
 end
 
 get "/" do
