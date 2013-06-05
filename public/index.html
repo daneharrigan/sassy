@@ -65,15 +65,19 @@ body
 &lt;!doctype html&gt;
 &lt;script src="http://sassy.herokuapp.com/sassy.js"&gt;&lt;/script&gt;
 &lt;style type="text/scss"&gt;
-$light-grey: #eee
-$dark-grey: #333
+@import "compass/css3";
+$light-grey: #eee;
+$dark-grey: #333;
 
-body
-  background: $light-grey
-  color: $dark-grey
+body {
+  background: $light-grey;
+  color: $dark-grey;
 
-  p
-    font-size: 14px
+  p {
+    font-size: 14px;
+    @include box-shadow(red 2px 2px 10px); /* omg compass! */
+  }
+}
 &lt;/style&gt;
 
 &lt;!-- your html --&gt;
