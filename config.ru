@@ -3,7 +3,7 @@ require "sass"
 require "compass"
 
 post "/generate" do
-  response["Access-Control-Allow-Origin"] =  "*"
+  headers "Access-Control-Allow-Origin" =>  "*"
   content_type "text/css"
 
   content = request.body.read
