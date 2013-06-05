@@ -1,0 +1,88 @@
+<!doctype html>
+<style type="text/css">
+body {
+  background: #f1f1f1;
+  font: 16px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+div {
+  margin: auto 80px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+pre, code {
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+pre {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+}
+
+a:link, a:visited {
+  color: #111;
+}
+</style>
+<div>
+  <h1>Sass as a Service</h1>
+  <hr>
+  <p>A proof of concept to remove the Ruby dependency from designers wanting to use Sass and Compass.</p>
+
+  <h2>Using Sass</h2>
+  Set the style tag's type attribute to <code>text/sass</code>.
+
+  <pre>
+&lt;!doctype html&gt;
+&lt;script src="http://sassy.herokuapp.com/sassy.js"&gt;&lt;/script&gt;
+&lt;style type="text/sass"&gt;
+$light-grey: #eee
+$dark-grey: #333
+
+body
+  background: $light-grey
+  color: $dark-grey
+
+  p
+    font-size: 14px
+&lt;/style&gt;
+
+&lt;!-- your html --&gt;
+  </pre>
+
+  <h2>Using SCSS</h2>
+  Set the style tag's type attribute to <code>text/scss</code>.
+
+  <pre>
+&lt;!doctype html&gt;
+&lt;script src="http://sassy.herokuapp.com/sassy.js"&gt;&lt;/script&gt;
+&lt;style type="text/scss"&gt;
+$light-grey: #eee
+$dark-grey: #333
+
+body
+  background: $light-grey
+  color: $dark-grey
+
+  p
+    font-size: 14px
+&lt;/style&gt;
+
+&lt;!-- your html --&gt;
+  </pre>
+
+  <hr>
+
+  <footer>
+    By <a href="https://github.com/daneharrigan">Dane Harrigan</a>
+  </footer>
+</div>
+
