@@ -5,7 +5,9 @@ require "compass"
 disable :protection
 
 post "/generate" do
-  headers "Access-Control-Allow-Origin" =>  "*"
+  headers(
+    "Access-Control-Allow-Origin" =>  "*",
+    "Access-Control-Allow-Headers" => "*")
   content_type "text/css"
 
   content = request.body.read
@@ -16,7 +18,9 @@ post "/generate" do
 end
 
 options "/generate" do
-  headers "Access-Control-Allow-Origin" =>  "*"
+  headers(
+    "Access-Control-Allow-Origin" =>  "*",
+    "Access-Control-Allow-Headers" => "*")
 end
 
 get "/" do
